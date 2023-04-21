@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+	
+	<hibernate-configuration>
+	<session-factory>
+	<!-- RELATED TO THE START OF THE DATABASE CONNECTION START-->
+	<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+	<property name="connection.url">jdbc:mysql://localhost:3306/mycart</property>
+	<property name="connection.username">root</property>
+	<property name="connection.password">root</property>
+	
+	
+	<!-- RELATED TO THE END OF THE DATABASE CONNECTION END -->
+	
+	<!-- RELATED PROPERTIES OF HIBERNATE START -->
+	<property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>
+	<property name="hbm2ddl.auto">update</property><!-- so that again table does not changes once created -->
+	<property name="show_sql">true</property>
+	<property name="format_sql"></property>
+	<!-- RELATED PROPERTIES OF HIBERNATE END -->
+	
+	
+<!-- mapping properties for the class to be given to hibernate -->
+<mapping class="com.learn.mycart.entities.User"/>
+<mapping class="com.learn.mycart.entities.Category"/>
+<mapping class="com.learn.mycart.entities.Product"/>
+
+	
+	
+	
+	
+	
+	
+	 
+	
+	
+	
+	
+	</session-factory>
+	</hibernate-configuration>
